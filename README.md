@@ -1,3 +1,9 @@
+# Habbit Rabbit (formerly known as Habbit Hub)
+
+Habbit Rabbit is a web application aiming at helping you start and manage habbits.
+
+![MVP of current application](./Shot1.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
