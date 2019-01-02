@@ -39,7 +39,7 @@ class DayContainer extends React.Component {
     this.handleReset = this.handleReset.bind(this);
   }
   handleAdd() {
-    const maxCompleted = 5;
+    const maxCompleted = 100;
     const currentDays = this.state.days;
     const newDays = currentDays.length + 1;
     const newDaysArray = currentDays.slice();
