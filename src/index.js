@@ -41,8 +41,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <h1>Challenges in progress:</h1>
-        <div>
+        <div className="challenges-header">
+          <h1>HabbitRabbit</h1>
+          <p>Start small. Finish big. Build those habits with habbitRabbit!</p>
+        </div>
+        <div className="challenges-form">
+          <h2>Why not add a challenge?</h2>
           <label>#100DaysOf</label>
           <input
             value={this.state.inputValue}
