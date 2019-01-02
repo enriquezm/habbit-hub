@@ -7,15 +7,16 @@ const Title = styled.h2`
 `;
 
 const ChallengeWrapper = styled.div`
-  margin-bottom: 20px;
-  width: 30%;
+  margin: 0 5px 5px 0;
   padding: 10px;
+  width: 45%;
   border-radius: 4px;
+  border: 1px solid #4413ff;
 
   @media (max-width: 900px) {
-    width: 50%;
+    width: 45%;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 300px) {
     width: 100%;
   }
 `;
