@@ -43,6 +43,7 @@ class DayContainer extends React.Component {
     const currentDays = this.state.days;
     const newDays = currentDays.length + 1;
     const newDaysArray = currentDays.slice();
+    
     newDaysArray.push(String(newDays));
     if (newDays === maxCompleted) {
       this.setState({
