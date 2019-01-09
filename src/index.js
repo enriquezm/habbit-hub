@@ -16,25 +16,26 @@ class App extends React.Component {
             "A sample 100days challenge to start you off. Remove me if you like."
         }
       ],
-      inputValue: ""
+      inputValueName: "",
+      inputValueDesc: ""
     };
     this.addChallenge = this.addChallenge.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
   handleChange(e) {
     this.setState({
-      inputValue: e.target.value
+      [e.target.name]: e.target.value
     });
   }
   addChallenge(challengeName) {
-    console.log(this.state.inputValue);
     let newChallengeList = [...this.state.challenges];
     newChallengeList.push({
-      name: this.state.inputValue,
-      description: "Some new challenge"
+      name: this.state.inputValueName,
+      description: this.state.inputValueDesc
     });
     this.setState({
-      inputValue: "",
+      inputValueName: "",
+      inputValueDesc: "",
       challenges: newChallengeList
     });
   }
@@ -49,7 +50,15 @@ class App extends React.Component {
           <h2>Why not add a challenge?</h2>
           <label>#100DaysOf</label>
           <input
-            value={this.state.inputValue}
+            value={this.state.inputValueName}
+            name="inputValueName"
+            onChange={this.handleChange}
+            type="text"
+          />
+          <label>Description</label>
+          <input
+            value={this.state.inputValueDesc}
+            name="inputValueDesc"
             onChange={this.handleChange}
             type="text"
           />
