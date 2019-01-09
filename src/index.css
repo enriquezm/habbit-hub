@@ -8,6 +8,10 @@ body {
   color: #efebff;
   background: #080027;
 }
+h2 {
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
 .wrapper {
   width: 900px;
   margin: 0 auto;
