@@ -48,16 +48,18 @@ class App extends React.Component {
         </div>
         <div className="challenges-form">
           <h2>Why not add a challenge?</h2>
-          <label>#100DaysOf</label>
+          <label for="inputValueName">#100DaysOf</label>
           <input
             value={this.state.inputValueName}
+            id="inputValueName"
             name="inputValueName"
             onChange={this.handleChange}
             type="text"
           />
-          <label>Description</label>
+          <label for ="inputValueDesc">Description</label>
           <input
             value={this.state.inputValueDesc}
+            id="inputValueDesc"
             name="inputValueDesc"
             onChange={this.handleChange}
             type="text"
