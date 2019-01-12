@@ -1,6 +1,7 @@
 
 import React from "react";
 import Challenge from "./Challenge";
+import Header from "./Header";
 
 import "./App.css";
 
@@ -41,10 +42,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="wrapper">
-        <div className="challenges-header">
-          <h1>HabbitRabbit</h1>
-          <p>Start small. Finish big. Build those habits with habbitRabbit!</p>
-        </div>
+        <Header />
         <div className="challenges-form">
           <h2>Why not add a challenge?</h2>
           <label for="inputValueName">#100DaysOf</label>
