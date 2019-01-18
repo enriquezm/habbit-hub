@@ -1,7 +1,9 @@
 
+"use strict;"
 import React from "react";
 import Challenge from "./Challenge";
 import Header from "./Header";
+import mysql from "mysql";
 
 import "./App.css";
 
@@ -21,6 +23,14 @@ class App extends React.Component {
     };
     this.addChallenge = this.addChallenge.bind(this);
     this.handleChange = this.handleChange.bind(this);
+
+    // Database connection
+    const con = mysql.createConnection({
+      host: "xxx",
+      user: "xxx",
+      password: "xxx",
+      database: "xxx"
+    });
   }
   handleChange(e) {
     this.setState({
@@ -28,7 +38,10 @@ class App extends React.Component {
     });
   }
   addChallenge(challengeName) {
-    let newChallengeList = [...this.state.challenges];
+    if(this.state.inputValueName === '' || this.state.inputValueDesc === '') {
+      alert("Please enter a complete name and/or description for your challenge.");
+    } else {
+      let newChallengeList = [...this.state.challenges];
     newChallengeList.push({
       name: this.state.inputValueName,
       description: this.state.inputValueDesc
@@ -38,6 +51,7 @@ class App extends React.Component {
       inputValueDesc: "",
       challenges: newChallengeList
     });
+    }
   }
   render() {
     return (
